@@ -23,6 +23,37 @@ Zasadniczo... wszystko:
 
 ---
 
+# Jak programista zostawia takie dane?
+
+- robots.txt
+- backupy na
+- informacje z bazy danych w wiadomości z błędem
+- niepotrzebne ujawnianie nadmiernych danych
+- hardkodowanie sekretów: kluczy API, haseł, etc...
+- inna reakcja aplikacji w przypadku np. sprawdzania, czy login danego użytkownika istnieje
+
+(https://portswigger.net/web-security/information-disclosure#examples-of-information-disclosure)
+
+---
+
+# Co może wyciec?
+
+- dane użytkowników
+- dane biznesowe / firmowe
+- techniczne dane o aplikacji / infrastrukturze, na której stoi
+
+(https://portswigger.net/web-security/information-disclosure#examples-of-information-disclosure)
+
+---
+
+# Co może wyciec?
+
+- dane użytkowników (jakoś to obsługujemy, bo RODO)
+- dane biznesowe / firmowe (jakoś to obsługujemy, bo BIZNES)
+- techniczne dane o aplikacji / infrastrukturze, na której stoi (jakoś...)
+
+---
+
 # Dlaczemu?
 
 - trzeba dowozić nowe ficzery ("mitowanie dedlajnu by nie było fakapu")
@@ -33,7 +64,17 @@ Zasadniczo... wszystko:
 
 ---
 
-# Co może pójść nie tak?
+# Dlaczemu?
+
+- nie usuwamy komentarzy / innych danych,które nie powinny zostać w aplikacji (ale czemu mają być w pierwszym miejscu...)
+- błędna konfiguracja (aplikacja, infrastruktura)
+- niewłaściwe zaprojektowanie aplikacji (np. zwracamy użytkownikowi kody błędu)
+
+## (https://portswigger.net/web-security/information-disclosure#examples-of-information-disclosure)
+
+---
+
+# Co może pójść nie tak? O_O
 
 ---
 
