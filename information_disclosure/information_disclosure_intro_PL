@@ -26,13 +26,13 @@ Zasadniczo... wszystko:
 # Jak programista zostawia takie dane?
 
 - robots.txt
-- backupy na
+- backupy na serwerze
 - informacje z bazy danych w wiadomości z błędem
 - niepotrzebne ujawnianie nadmiernych danych
 - hardkodowanie sekretów: kluczy API, haseł, etc...
 - inna reakcja aplikacji w przypadku np. sprawdzania, czy login danego użytkownika istnieje
 
-(https://portswigger.net/web-security/information-disclosure#examples-of-information-disclosure)
+(https://portswigger.net/web-security/information-disclosure)
 
 ---
 
@@ -42,7 +42,7 @@ Zasadniczo... wszystko:
 - dane biznesowe / firmowe
 - techniczne dane o aplikacji / infrastrukturze, na której stoi
 
-(https://portswigger.net/web-security/information-disclosure#examples-of-information-disclosure)
+(https://portswigger.net/web-security/information-disclosure)
 
 ---
 
@@ -70,7 +70,7 @@ Zasadniczo... wszystko:
 - błędna konfiguracja (aplikacja, infrastruktura)
 - niewłaściwe zaprojektowanie aplikacji (np. zwracamy użytkownikowi kody błędu)
 
-(https://portswigger.net/web-security/information-disclosure#examples-of-information-disclosure)
+(https://portswigger.net/web-security/information-disclosure)
 
 ---
 
