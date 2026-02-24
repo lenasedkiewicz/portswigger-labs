@@ -1,3 +1,3 @@
 # Portswigger labs
 
-Nottes from PortSwigger labs.
+Notes from PortSwigger labs.
