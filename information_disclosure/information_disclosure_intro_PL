@@ -100,7 +100,15 @@ https://portswigger.net/web-security/information-disclosure/exploiting/lab-infol
 ## Dostęp przez localhost
 
 - wydaje się być dobrym pomysłem - w końcu lokalnie aplikację odpala tylko ktoś, kto ma repozytorium, prawda?
-- a co jeśli da się inaczej?
+- a co jeśli da się "podszyć" pod localhost?
+
+---
+
+## Nagłówki HTTP
+
+- przesyłają dodatkowe informacje w zapytaniu i / lub w odpowiedzi
+
+(https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers)
 
 ---
 
