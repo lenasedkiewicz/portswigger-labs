@@ -87,7 +87,18 @@ function myFunction() {
 
 ---
 
-# Zacznijmy od początku... czyli metoda alert
+# Czemu ten błąd jest taki straszny?
+
+- może wpłynąć na interakcję między użytkownikiem a podatną aplikację
+- atakujący może podszyć się pod użytkownika...
+- ... wykonać działania, które on może wykonać...
+- ... albo wykraść jego dane.
+
+[za: Portswigger](https://portswigger.net/web-security/cross-site-scripting)
+
+---
+
+# Proof of concept: metoda alert
 
 <script>alert(0);</script>
 
