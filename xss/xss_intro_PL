@@ -5,73 +5,81 @@ class: invert
 backgroundColor: #000000;
 ---
 
-# Information Disclosure
+# XSS
 
-## czego oko nie widzi, tego hackerowi nie żal
-
----
-
-# Co programista może zostawić w kodzie?
-
-Zasadniczo... wszystko:
-
-- sekrety
-- informacje wyświetlające się w konsoli / na stronie
-- nieobsłużone właściwie błędy
-- domyślną konfigurację
-- informacje o konfiguracji
-- ...etc.
+##
 
 ---
 
-# Jak programista zostawia takie dane?
+# Typowa strona WWW
 
-- robots.txt
-- backupy na serwerze
-- informacje z bazy danych w wiadomości z błędem
-- niepotrzebne ujawnianie nadmiernych danych
-- hardkodowanie sekretów: kluczy API, haseł, etc...
-- inna reakcja aplikacji w przypadku np. sprawdzania, czy login danego użytkownika istnieje
+(w latach 90 :P)
 
-(https://portswigger.net/web-security/information-disclosure)
+- [HTML](https://www.geeksforgeeks.org/html/what-is-html/) - od 1993
+- [CSS](https://www.geeksforgeeks.org/css/css-history-versions/) - od 1996
+- [Java](https://medium.com/@BitrockIT/java-the-world-wide-web-the-beginnings-d186cb0d381) - od 1996...
 
 ---
 
-# Co może wyciec?
+# Typowa strona WWW
 
-- dane użytkowników
-- dane biznesowe / firmowe
-- techniczne dane o aplikacji / infrastrukturze, na której stoi
+(w latach 90 :P)
 
-(https://portswigger.net/web-security/information-disclosure)
-
----
-
-# Co może wyciec?
-
-- dane użytkowników (jakoś to obsługujemy, bo RODO)
-- dane biznesowe / firmowe (jakoś to obsługujemy, bo BIZNES)
-- techniczne dane o aplikacji / infrastrukturze, na której stoi (jakoś...)
+- po drodze jest kilka różnych rozwiązań, które mają dodać "wodotryski" (szeroko pojętą interaktywność)
+- [Adobe Flash Player](https://pl.wikipedia.org/wiki/Adobe_Flash_Player)
+- Javę wypiera JavaScript ([z czasem](https://dev.to/jasonnordheim/how-javascript-came-to-dominate-web-development-3nom))...
 
 ---
 
-# Dlaczemu?
+# Jak dodać kod JS w HTML?
 
-- trzeba dowozić nowe ficzery ("mitowanie dedlajnu by nie było fakapu")
-- nie ma skonfigurowanych narzędzi, które wyłapywałyby brak pewnych rozwiązań (automatyczne scany w pipeline, np. Semgrep)
-- brakuje wiedzy o tym, na co zwrócić uwagę
-- ważniejsze od jakości testów jest pokrycie kodu testami
-- ...itd.
+- <script src="myScript.js"></script>
+- <script src="/js/myScript.js"></script>
+- <script src="https://www.w3schools.com/js/myScript.js"></script>
+
+[za: W3schools](https://www.w3schools.com/js/js_whereto.asp)
 
 ---
 
-# Dlaczemu?
+# Jak dodać kod JS w HTML?
 
-- nie usuwamy komentarzy / innych danych,które nie powinny zostać w aplikacji (ale czemu mają być w pierwszym miejscu...)
-- błędna konfiguracja (aplikacja, infrastruktura)
-- niewłaściwe zaprojektowanie aplikacji (np. zwracamy użytkownikowi kody błędu)
+- <script></script> w sekcji head (<head></head>)
+- <script></script> w sekcji... body (<body></body>)
 
-(https://portswigger.net/web-security/information-disclosure)
+[za: W3schools](https://www.w3schools.com/js/js_whereto.asp)
+
+---
+
+# Jak dodać kod JS w HTML?
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo JavaScript in Body</h2>
+
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+</body>
+</html>
+```
+
+[za: W3schools](https://www.w3schools.com/js/js_whereto.asp)
+
+---
+
+# A gdzieś indziej?...
+
+- ... np. w znaczniku <input /> ?
+- ... albo w polu tekstowym?
 
 ---
 
