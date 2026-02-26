@@ -87,6 +87,15 @@ function myFunction() {
 
 ---
 
+# Jak działa XSS?
+
+- podatna strona zwraca użytkownikowi złośliwy kod JS
+- kod wykonuje się w przeglądarce ofiary
+
+[za: Portswigger](https://portswigger.net/web-security/cross-site-scripting)
+
+---
+
 # Czemu ten błąd jest taki straszny?
 
 - może wpłynąć na interakcję między użytkownikiem a podatną aplikację
@@ -98,11 +107,25 @@ function myFunction() {
 
 ---
 
+# Rodzaje XSS
+
+- Reflected XSS - przez żądanie HTTP
+- Stored XSS - przez kod znajdujący się w bazie danych
+- DOM-based XSS - przez kod po stronie klienta (nie serwera)
+
+[za: Portswigger](https://portswigger.net/web-security/cross-site-scripting)
+
+---
+
 # Proof of concept: metoda alert
 
 <script>alert(0);</script>
 
 (windows.alert(x));
+
+---
+
+# Koniec laby, czas na laby!
 
 ---
 
