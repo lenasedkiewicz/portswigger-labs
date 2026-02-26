@@ -125,6 +125,14 @@ function myFunction() {
 
 ---
 
+# Advanced Proof of concept
+
+<script>print();</script>
+
+[za: Portswigger](https://portswigger.net/web-security/cross-site-scripting)
+
+---
+
 # Koniec laby, czas na laby!
 
 ---
@@ -143,3 +151,45 @@ Lab:
 https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded
 
 ---
+
+## Stored XSS
+
+- dodajemy treść, która będzie przechowana w bazie danych (np. komentarz)
+- alert() nie wykona się od razu
+- musimy wejść na podstronę, gdzie się wyświetli nasza treść
+- uwaga na encje :)
+
+---
+
+## Stored XSS
+
+Lab:
+https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded
+
+---
+
+## DOM XSS
+
+- atak wykonuje się bezpośrednio w przeglądarce
+- nie wszystkie funkcje w JS są "bezpieczne"
+- [document.write](https://developer.mozilla.org/en-US/docs/Web/API/Document/write)
+
+--
+
+## DOM XSS dla document.write
+
+Lab:
+https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink
+
+--
+
+### Ściągawka:
+
+"><script>alert(0);</script><"
+
+--
+
+## DOM XSS dla innerHTML
+
+Lab:
+https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-innerhtml-sink
