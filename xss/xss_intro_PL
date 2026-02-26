@@ -193,3 +193,13 @@ https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document
 
 Lab:
 https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-innerhtml-sink
+
+---
+
+### Ściągawka:
+
+<img src="x" onerror="alert(1)" />
+<img width="600px" height="400px" onclick="alert(1);" />
+onmouseover...
+
+---
